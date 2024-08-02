@@ -66,12 +66,24 @@ function avj(arr, callback = (x) => x) {
 
 //shift
 function shift(arr) {
-  array_error(_arr);
+  array_error(arr);
   for (let i = 0; i < arr.length; i++) {
     arr[i] = arr[i + 1];
   }
   arr.length = arr.length - 1;
   return arr[0];
+}
+
+//unshift
+function unshift(arr, value) {
+  array_error(arr);
+
+  for (let i = arr.length; i >= 0; i--) {
+    arr[i + 1] = arr[i];
+  }
+  arr.length = arr.length - 1;
+  arr[0] = value;
+  return arr.length;
 }
 
 //flatten
@@ -301,6 +313,7 @@ module.exports = {
   lastIndexOf: lastIndexOf,
   includes: includes,
   shift: shift,
+  unshift: unshift,
   splice: splice,
   slice: slice,
   push: push,
