@@ -228,7 +228,7 @@ export function map(arr, callback) {
 //reduce
 export function reduce(arr, callback, accumulator) {
 	array_error(arr);
-	accumulator ?? arr[0];
+	accumulator ??= arr[0];
 	for (let i = 0; i < arr.length; i++) {
 		accumulator = callback(accumulator, arr[i], i, arr);
 	}
@@ -276,7 +276,7 @@ Array.prototype.intersection = function (arr) {
 	for (let i = 0; i < this.length; i++) {
 		for (let j = 0; j < arr.length; j++) {
 			if (this[i] === arr[j] && !includes(temparr, this[i])) {
-				push(temparr, this[i]);
+				temparr[temparr.length] = this[i];
 			}
 		}
 	}
@@ -288,11 +288,11 @@ Array.prototype.union = function (arr) {
 	array_error(this);
 	array_error(arr);
 	for (let i = 0; i < this.length; i++) {
-		push(temparr, this[i]);
+		temparr[temparr.length] = this[i];
 	}
 	for (let i = 0; i < arr.length; i++) {
 		if (!includes(temparr, arr[i])) {
-			push(temparr, arr[i]);
+			temparr[temparr.length] = arr[i];
 		}
 	}
 	return temparr;
@@ -322,7 +322,7 @@ Array.prototype.inbetween = function (start, end) {
 	}
 	for (let i = 0; i < this.length; i++) {
 		if (this[i] > start && this[i] <= end) {
-			push(temparr, this[i]);
+			temparr[temparr.length] = this[i];
 		}
 	}
 
@@ -341,6 +341,79 @@ Array.prototype.groupby = function (callback) {
 		tempobj[k][tempobj[k].length] = this[i];
 	}
 	return tempobj;
+};
+
+//unique
+Array.prototype.unique = function () {
+	let temparr = [];
+	array_error(this);
+	for (let i = 0; i < this.length; i++) {
+		let active = true;
+		for (let j = 0; j < temparr.length; j++) {
+			if (i !== j && this[i] === this[j]) {
+				active = false;
+				break;
+			}
+		}
+
+		if (active) {
+			temparr[temparr.length] = this[i];
+		}
+	}
+	return temparr;
+};
+
+//chunk
+Array.prototype.chunk = function (size) {
+	array_error(this);
+	size ??= this.length;
+	let temparr = [];
+	for (let i = size - 1; i <= this.length; i += size) {
+		let startpoint = size - 1 - i;
+		let compose = [];
+		for (let j = startpoint < 0 ? -startpoint : startpoint; j <= i; j++) {
+			if (this[j]) {
+				compose[compose.length] = this[j];
+			}
+		}
+		temparr[temparr.length] = compose;
+	}
+	return temparr;
+};
+
+//compact
+Array.prototype.compact = function () {
+	array_error(this);
+	let temparr = [];
+	for (let i = 0; i < this.length; i++) {
+		if (this[i]) {
+			temparr[temparr.length] = this[i];
+		}
+	}
+	return temparr;
+};
+
+//frompair
+// Array.prototype.fromPair = function () {
+// 	array_error(this);
+// 	let tempobj = {};
+// 	for (let i = 0; i < this.length; i++) {
+// 		tempobj[i] = this[i];
+// 	}
+// 	return tempobj;
+// };
+
+//zip
+Array.prototype.zip = function (...arr) {
+	array_error(this);
+	array_error(arr);
+	console.log(arr);
+	let temparr = [];
+	let length = this.length >= arr.length ? this.length : arr.length;
+	for (let i = 0; i < length; i++) {
+		temparr[temparr.length] = [this[i], arr[i]];
+	}
+	return temparr;
 };
 
 function array_error(arr) {
