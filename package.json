@@ -1,22 +1,33 @@
 {
-  "name": "library",
-  "version": "1.0.0",
-  "description": "npm library",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "prettify": "prettier --write \"./**/*.{js,ts,json}\""
-  },
-  "author": "Ayanavo",
-  "license": "ISC",
-  "dependencies": {
-    "prettier": "^3.3.3"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.9.1",
-    "eslint": "^9.9.1",
-    "globals": "^15.9.0"
-  }
+    "name": "library",
+    "version": "1.0.0",
+    "description": "npm library",
+    "main": "index.js",
+    "type": "module",
+    "keywords": [
+        "javascript"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "prettify": "prettier --write \"./**/*.{js,ts,json}\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ayanavo/Library.git"
+    },
+    "author": "Ayanavo",
+    "license": "ISC",
+    "dependencies": {
+        "prettier": "^3.3.3"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.9.1",
+        "eslint": "^9.9.1",
+        "globals": "^15.9.0"
+    },
+    "bugs": {
+        "url": "https://github.com/Ayanavo/Library/issues"
+    },
+    "homepage": "https://github.com/Ayanavo/Library#readme"
 }

@@ -55,32 +55,32 @@ Array.prototype.equal = function (arr) {
 };
 
 //intersection
-Array.prototype.intersection = function (arr) {
-    let temparr = [];
-    array_error(this);
-    array_error(arr);
-    for (let i = 0; i < this.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-            if (this[i] === arr[j] && !includes(temparr, this[i])) {
-                temparr[temparr.length] = this[i];
-            }
-        }
-    }
-    return temparr;
-};
+// Array.prototype.intersection = function (arr) {
+//     let temparr = [];
+//     array_error(this);
+//     array_error(arr);
+//     for (let i = 0; i < this.length; i++) {
+//         for (let j = 0; j < arr.length; j++) {
+//              if (this[i] === arr[j] && !includes(temparr, this[i])) {
+//             temparr[temparr.length] = this[i];
+//              }
+//         }
+//     }
+//     return temparr;
+// };
 
 Array.prototype.union = function (arr) {
-    let temparr = [];
+    const temparr = [];
     array_error(this);
     array_error(arr);
     for (let i = 0; i < this.length; i++) {
         temparr[temparr.length] = this[i];
     }
-    for (let i = 0; i < arr.length; i++) {
-        if (!includes(temparr, arr[i])) {
-            temparr[temparr.length] = arr[i];
-        }
-    }
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (!includes(temparr, arr[i])) {
+    //         temparr[temparr.length] = arr[i];
+    //     }
+    // }
     return temparr;
 };
 
@@ -100,7 +100,7 @@ Array.prototype.exclusive = function (arr) {
 
 //in between
 Array.prototype.inbetween = function (start, end) {
-    let temparr = [];
+    const temparr = [];
     array_error(this);
     end ??= this.max();
     if (start >= end) {
@@ -117,7 +117,7 @@ Array.prototype.inbetween = function (start, end) {
 
 //unique
 Array.prototype.unique = function () {
-    let temparr = [];
+    const temparr = [];
     for (let i = 0; i < this.length; i++) {
         let unique = true;
         for (let j = 0; j < temparr.length; j++) {
@@ -140,10 +140,10 @@ Array.prototype.empty = function () {
 
 //group by
 Array.prototype.groupby = function (callback) {
-    let tempobj = {};
+    const tempobj = {};
     array_error(this);
     for (let i = 0; i < this.length; i++) {
-        let k = callback(this[i]);
+        const k = callback(this[i]);
         if (!tempobj[k]) {
             tempobj[k] = [];
         }
@@ -155,9 +155,9 @@ Array.prototype.groupby = function (callback) {
 //chunk
 Array.prototype.chunk = function (size) {
     array_error(this);
-    let temparr = [];
+    const temparr = [];
     for (let i = 0; i < this.length; i += size) {
-        let subarr = [];
+        const subarr = [];
         for (let j = 0; j < size; j++) {
             subarr[subarr.length] = this[j];
         }
@@ -169,7 +169,7 @@ Array.prototype.chunk = function (size) {
 //compact
 Array.prototype.compact = function () {
     array_error(this);
-    let temparr = [];
+    const temparr = [];
     for (let i = 0; i < this.length; i++) {
         if (this[i]) {
             temparr[temparr.length] = this[i];
@@ -183,8 +183,8 @@ Array.prototype.zip = function (...arr) {
     array_error(this);
     array_error(arr);
     console.log(arr);
-    let temparr = [];
-    let length = this.length >= arr.length ? this.length : arr.length;
+    const temparr = [];
+    const length = this.length >= arr.length ? this.length : arr.length;
     for (let i = 0; i < length; i++) {
         temparr[temparr.length] = [this[i], arr[i]];
     }
