@@ -1,24 +1,10 @@
-/* To learn more about this file see: https://angular.io/guide/typescript-configuration. */
 {
-    "compileOnSave": false,
-    "compilerOptions": {
-        "baseUrl": "./",
-        "forceConsistentCasingInFileNames": true,
-        "strict": true,
-        "noImplicitAny": true,
-        "noImplicitOverride": true,
-        "noPropertyAccessFromIndexSignature": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-        "sourceMap": true,
-        "declaration": false,
-        "downlevelIteration": true,
-        "experimentalDecorators": true,
-        "moduleResolution": "node",
-        "importHelpers": true,
-        "target": "ES6",
-        "module": "ES6",
-        "useDefineForClassFields": false,
-        "lib": ["ES2022", "es6"]
-    }
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "allowJs": true
+  },
+  "files": ["src/index.ts"]
 }
