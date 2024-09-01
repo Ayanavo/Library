@@ -143,7 +143,7 @@ Array.prototype.groupby = function (callback) {
     const tempobj = {};
     array_error(this);
     for (let i = 0; i < this.length; i++) {
-        const k = callback(this[i]);
+        const k = callback(this[i], i, this);
         if (!tempobj[k]) {
             tempobj[k] = [];
         }
