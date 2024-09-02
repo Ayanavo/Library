@@ -1,4 +1,4 @@
-# Locusjs
+# 🚀 Locusjs
 
 Locus.js is a collection of helper functions designed to improve common javaScript features.
 
@@ -22,4 +22,10 @@ To install @ayanavo/locusjs, use npm or yarn:
 
 ```bash
 npm install @ayanavo/locusjs
+```
+
+or
+
+```bash
+yarn add @ayanavo/locusjs
 ```
