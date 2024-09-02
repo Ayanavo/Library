@@ -3,9 +3,10 @@
     "version": "1.3.3",
     "description": "npm library",
     "sideEffects": false,
-    "module": "index.js",
-    "main": "index.js",
+    "module": "locus.js",
+    "main": "locus.js",
     "type": "module",
+    "types": "",
     "keywords": [
         "javascript",
         "helper",
