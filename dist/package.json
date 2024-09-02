@@ -1,12 +1,11 @@
 {
     "name": "@ayanavo/locusjs",
     "version": "1.3.4",
-    "description": "npm library",
+    "description": "javaScript utility functions library",
     "sideEffects": false,
     "module": "locus.js",
-    "main": "locus.js",
     "type": "module",
-    "types": "",
+    "types": "locus.d.ts",
     "keywords": [
         "javascript",
         "helper",
