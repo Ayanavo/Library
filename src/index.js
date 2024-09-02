@@ -1,4 +1,4 @@
 // eslint-disable-next-line no-unused-vars
-import locus from "@ayanavo/locusjs";
-const numbers = [1, 2, 3, 4, 5];
-console.log(numbers.empty());
+import Array from "@ayanavo/locusjs";
+
+console.log([1, 3, 4, 3].unique());

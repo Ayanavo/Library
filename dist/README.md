@@ -1,6 +1,6 @@
 # 🚀 Locusjs
 
-Locus.js is a collection of javaScript utility functions.
+Locus.js is a collection of javaScript utility functions. Simply import and run.
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ Locus.js is a collection of javaScript utility functions.
 ## Usage
 
 ```js
-import Array from "@ayanavo/locusjs";
+import "@ayanavo/locusjs";
 
 console.log([1, 2, 4, 4, 5].unique());
 ```
@@ -34,4 +34,10 @@ Yarn
 
 ```bash
 yarn add @ayanavo/locusjs
+```
+
+Pnpm
+
+```bash
+pnpm add  @ayanavo/locusjss
 ```
