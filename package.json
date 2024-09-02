@@ -1,6 +1,6 @@
 {
     "name": "locusjs",
-    "version": "1.3.9",
+    "version": "1.3.10",
     "description": "javaScript utility functions library",
     "module": "index.js",
     "main": "index.js",
@@ -38,6 +38,6 @@
     },
     "homepage": "https://github.com/Ayanavo/Library#readme",
     "dependencies": {
-        "@ayanavo/locusjs": "^1.3.9"
+        "@ayanavo/locusjs": "^1.3.10"
     }
 }
