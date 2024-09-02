@@ -12,8 +12,6 @@ Locus.js is a collection of helper functions designed to improve common javaScri
 
 ## Usage
 
-## Usage
-
 ```js
 import Array from "@ayanavo/locusjs";
 
