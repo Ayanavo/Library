@@ -1,6 +1,6 @@
 # 🚀 Locusjs
 
-Locus.js is a collection of helper functions designed to improve common javaScript features.
+Locus.js is a collection of javaScript utility functions.
 
 ## Table of Contents
 
@@ -24,13 +24,13 @@ console.log([1, 2, 4, 4, 5].unique());
 
 ## Installation
 
-To install @ayanavo/locusjs, use npm or yarn:
+NPM
 
 ```bash
 npm install @ayanavo/locusjs
 ```
 
-or
+Yarn
 
 ```bash
 yarn add @ayanavo/locusjs

@@ -1,6 +1,6 @@
 {
     "name": "@ayanavo/locusjs",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "description": "npm library",
     "sideEffects": false,
     "module": "locus.js",
