@@ -10,6 +10,16 @@ Locus.js is a collection of helper functions designed to improve common javaScri
 -   [License](#license)
 -   [Changelog](#changelog)
 
+## Usage
+
+## Usage
+
+```js
+import Array from "@ayanavo/locusjs";
+
+console.log([1, 2, 4, 4, 5].unique());
+```
+
 ## Features
 
 -   **Easy accessibility**: All functions in locus.js are prototypes.
