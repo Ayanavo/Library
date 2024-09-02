@@ -38,6 +38,6 @@
     },
     "homepage": "https://github.com/Ayanavo/Library#readme",
     "dependencies": {
-        "@ayanavo/locusjs": "^1.3.8"
+        "@ayanavo/locusjs": "^1.3.9"
     }
 }
