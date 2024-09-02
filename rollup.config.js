@@ -7,7 +7,7 @@ export default formats.map(function (format) {
     return {
         input: "src/index.js",
         output: {
-            file: `dist/${format}.js`,
+            file: `dist/lib/${format}.js`,
             format: format,
             sourcemap: true,
             name: "Locus",
