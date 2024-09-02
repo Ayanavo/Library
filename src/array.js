@@ -207,32 +207,4 @@ function array_error(arr) {
     }
 }
 
-// module.exports = {
-//   sort: sort,
-//   indexOf: indexOf,
-//   lastIndexOf: lastIndexOf,
-//   includes: includes,
-//   shift: shift,
-//   unshift: unshift,
-//   splice: splice,
-//   slice: slice,
-//   push: push,
-//   fill: fill,
-//   map: map,
-//   filter: filter,
-//   find: find,
-//   findIndex: findIndex,
-//   pop: pop,
-//   concat: concat,
-//   reduce: reduce,
-//   some: some,
-//   every: every,
-//   max: max,
-//   min: min,
-//   avj: avj,
-//   flatten: flatten,
-//   equal: equal,
-//   intersection: intersection,
-//   union: union,
-//   exclusive: exclusive,
-// };
+// export default Constructor;
