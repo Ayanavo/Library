@@ -2,11 +2,14 @@
     "name": "@ayanavo/locusjs",
     "version": "1.2.1",
     "description": "npm library",
+    "module": "index.js",
     "main": "index.js",
     "type": "module",
     "keywords": [
         "javascript",
-        "helper"
+        "helper",
+        "utils",
+        "utilities"
     ],
     "scripts": {
         "test": "npm run test",
