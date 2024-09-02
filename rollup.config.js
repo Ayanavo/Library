@@ -3,12 +3,12 @@ import pkg from "./package.json";
 import typescript from "@rollup/plugin-typescript";
 import {terser} from "rollup-plugin-terser";
 const banner = `/* ! ${pkg.name} | v${pkg.version} | ${pkg.description} */`;
-const formats = ["es", "cjs", "iife"];
+const formats = ["es"];
 export default formats.map(function (format) {
     return {
-        input: "src/index.js",
+        input: "src/array.js",
         output: {
-            file: `dist/lib/array.${format}.js`,
+            file: `dist/lib/array/array.${format}.js`,
             format: format,
             sourcemap: true,
             name: "Locus",
