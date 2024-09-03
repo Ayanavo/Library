@@ -30,19 +30,19 @@ console.log([1, 2, 4, 4, 5].unique());
 
 NPM
 
-```bash
+```console
 npm install @ayanavo/locusjs
 ```
 
 Yarn
 
-```bash
+```console
 yarn add @ayanavo/locusjs
 ```
 
 Pnpm
 
-```bash
+```console
 pnpm add  @ayanavo/locusjss
 ```
 
