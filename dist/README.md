@@ -44,7 +44,7 @@ yarn add @ayanavo/locusjs
 PNPM
 
 ```console
-pnpm add  @ayanavo/locusjss
+pnpm add @ayanavo/locusjs
 ```
 
 [npm-version-image]: https://badgen.net/npm/v/@ayanavo/locusjs

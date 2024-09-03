@@ -1,6 +1,6 @@
 {
     "name": "@ayanavo/locusjs",
-    "version": "1.5.2",
+    "version": "1.5.3",
     "description": "javaScript utility functions library",
     "module": "./lib/locus.js",
     "main": ".lib/locus.js",
