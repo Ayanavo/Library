@@ -1,8 +1,9 @@
 {
-    "name": "@ayanavo/locusjs",
+    "name": "fluxjs",
     "version": "1.4.0",
     "description": "javaScript utility functions library",
     "module": "./lib/locus.js",
+    "main": ".lib/locus.js",
     "type": "module",
     "types": "./lib/locus.d.ts",
     "keywords": [
@@ -10,7 +11,8 @@
         "helper",
         "utils",
         "utilities",
-        "prototypes"
+        "prototypes",
+        "typescript"
     ],
     "files": [
         "lib",

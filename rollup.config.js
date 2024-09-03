@@ -1,14 +1,16 @@
 // rollup.config.js
-import pkg from "./package.json";
 import typescript from "@rollup/plugin-typescript";
 import {terser} from "rollup-plugin-terser";
+import pkg from "./package.json";
 const banner = `/* ! ${pkg.name} | v${pkg.version} | ${pkg.description} */`;
-const formats = ["es"];
-export default formats.map(function (format) {
-    return {
-        input: "src/array.js",
+
+const formats = ["es", "cjs"];
+
+const createConfig = (input, outputDir) => {
+    return formats.map((format) => ({
+        input: input,
         output: {
-            file: `dist/lib/array/array.${format}.js`,
+            file: `${outputDir}.${format}.js`,
             format: format,
             sourcemap: true,
             name: "Locus",
@@ -24,7 +26,10 @@ export default formats.map(function (format) {
                 declarationDir: "dist/lib",
                 emitDeclarationOnly: true,
             }),
+
             // Learn more about plugins from https://rollupjs.org/guide/en/#plugins
         ],
-    };
-});
+    }));
+};
+
+export default [...createConfig("src/array/array.js", "dist/lib/array/array"), ...createConfig("src/string/string.js", "dist/lib/string/string")];
