@@ -1,6 +1,6 @@
 {
-    "name": "fluxjs",
-    "version": "1.4.0",
+    "name": "@ayanavo/locusjs",
+    "version": "1.5.1",
     "description": "javaScript utility functions library",
     "module": "./lib/locus.js",
     "main": ".lib/locus.js",

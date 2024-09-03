@@ -2,6 +2,10 @@
 
 Locus.js is a collection of javaScript utility functions. Simply import and run.
 
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Install Size][npm-install-size-image]][npm-install-size-url]
+[![NPM Downloads][npm-downloads-image]][npm-downloads-url]
+
 ## Table of Contents
 
 -   [Features](#features)
