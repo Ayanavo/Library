@@ -45,3 +45,12 @@ Pnpm
 ```bash
 pnpm add  @ayanavo/locusjss
 ```
+
+[npm-version-image]: https://badgen.net/npm/v/@ayanavo/locusjs
+[npm-install-size-image]: https://badgen.net/packagephobia/install/@ayanavo/locusjs
+[npm-downloads-image]: https://badgen.net/npm/dm/@ayanavo/locusjs
+[npm-url]: https://npmjs.org/package/@ayanavo/locusjs
+[npm-install-size-url]: https://packagephobia.com/result?p=@ayanavo/locusjs
+[npm-downloads-url]: https://npmcharts.com/compare/@ayanavo/locusjs?minimal=true
+
+x
