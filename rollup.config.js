@@ -1,7 +1,7 @@
 // rollup.config.js
 import typescript from "@rollup/plugin-typescript";
 import {terser} from "rollup-plugin-terser";
-import pkg from "./package.json";
+import pkg from "./dist/package.json";
 const banner = `/* ! ${pkg.name} | v${pkg.version} | ${pkg.description} */`;
 
 const formats = ["es", "cjs"];
