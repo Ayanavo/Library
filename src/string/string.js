@@ -1,72 +1,45 @@
 //camelcase
 
 String.prototype.toCamelCase = function () {
-    const words = this.split(/[^a-zA-Z0-9]/);
-    if (words.length === 0) return "";
-    let str = words[0];
-    for (let i = 1; i < words.length; i++) {
-        const word = words[i];
-        if (word.length > 0) {
-            str += word[0].toUpperCase() + word.slice(1);
-        }
-    }
-    return str;
+    return this.split(/[^a-zA-Z0-9]+/)
+        .filter((word) => word.length > 0)
+        .map((word, index) => (index === 0 ? word : word[0].toUpperCase() + word.slice(1)))
+        .join("");
 };
 
 //kebabcase
 
 String.prototype.toKebabCase = function () {
-    const words = this.split(/[^a-zA-Z0-9]/);
-    if (words.length === 0) return "";
-    let str = words[0].toLowerCase();
-    for (let i = 1; i < words.length; i++) {
-        const word = words[i];
-        if (word.length > 0) {
-            str += "-" + word.toLowerCase();
-        }
-    }
-    return str;
+    return this.split(/[^a-zA-Z0-9]+/)
+        .filter((word) => word.length > 0)
+        .map((word) => word.toLowerCase())
+        .join("-");
 };
 
 //snakecase
 
 String.prototype.toSnakeCase = function () {
-    const words = this.split(/[^a-zA-Z0-9]/);
-    if (words.length === 0) return "";
-    let str = words[0].toLowerCase();
-    for (let i = 1; i < words.length; i++) {
-        const word = words[i];
-        if (word.length > 0) {
-            str += "_" + word.toLowerCase();
-        }
-    }
-    return str;
+    return this.split(/[^a-zA-Z0-9]+/)
+        .filter((word) => word.length > 0)
+        .map((word) => word.toLowerCase())
+        .join("_");
 };
 
 //pascalcase
 
 String.prototype.toPascalCase = function () {
     const words = this.split(/[^a-zA-Z0-9]/);
-    if (words.length === 0) return "";
-    let str = words[0].toUpperCase();
-    for (let i = 1; i < words.length; i++) {
-        const word = words[i];
-        if (word.length > 0) {
-            str += word[0].toUpperCase() + word.slice(1);
-        }
-    }
-    return str;
+    return words
+        .filter((word) => word.length > 0)
+        .map((word) => word[0].toUpperCase() + word.slice(1))
+        .join("");
 };
 
 //titlecase
 
 String.prototype.toTitleCase = function () {
-    const words = this.toLowerCase().split(" ");
-    for (let i = 0; i < words.length; i++) {
-        const word = words[i];
-        if (word.length > 0) {
-            words[i] = word[0].toUpperCase() + word.slice(1);
-        }
-    }
-    return words.join(" ");
+    return this.toLowerCase()
+        .split(" ")
+        .map((word) => (word.length > 0 ? word[0].toUpperCase() + word.slice(1) : ""))
+        .join(" ");
 };

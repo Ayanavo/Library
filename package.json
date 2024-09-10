@@ -2,8 +2,6 @@
     "name": "locusjs",
     "version": "1.4.0",
     "description": "javaScript utility functions library",
-    "module": "index.js",
-    "main": "index.js",
     "type": "module",
     "keywords": [
         "javascript",

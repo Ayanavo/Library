@@ -2,19 +2,16 @@ interface Array<T> {
     constructor: Function;
     /**
      * Returns the highest numeric value from the given numeric array.
-     * @param array An array of numbers
      */
     max(): number;
 
     /**
      * Returns the lowest numeric value from the given numeric array.
-     * @param array An array of numbers
      */
     min(): number;
 
     /**
      * Returns the average of all the numbers in the given array.
-     * @param array An array of numbers
      * @param predicate A function that accepts a numeric. The avj method calls
      * the predicate function on the result before returing the value.
      */
@@ -22,7 +19,6 @@ interface Array<T> {
 
     /**
      * Returns the sum of all the numbers in the given array.
-     * @param array An array of numbers
      * @param predicate A function that accepts a numeric. The sum method calls
      * the predicate function on the result before returing the value.
      */
@@ -30,19 +26,16 @@ interface Array<T> {
 
     /**
      * Returns a new array containing the unique elements from the given array.
-     * @param array An array of elements
      */
     unique(): T[];
 
     /**
      * Determines whether all the members of an array are equal to the given array.
-     * @param array An array of elements to match with the given array.
      */
     equal(array: Array<T>): boolean;
 
     /**
      * Determines whether all the members of an array are present to the given array.
-     * @param array An array of elements
      */
 
     exclusive(array: Array<T>): boolean;

@@ -55,19 +55,19 @@ Array.prototype.equal = function (arr) {
 };
 
 //intersection
-// Array.prototype.intersection = function (arr) {
-//     let temparr = [];
-//     array_error(this);
-//     array_error(arr);
-//     for (let i = 0; i < this.length; i++) {
-//         for (let j = 0; j < arr.length; j++) {
-//              if (this[i] === arr[j] && !includes(temparr, this[i])) {
-//             temparr[temparr.length] = this[i];
-//              }
-//         }
-//     }
-//     return temparr;
-// };
+Array.prototype.intersection = function (arr) {
+    const temparr = [];
+    array_error(this);
+    array_error(arr);
+    for (let i = 0; i < this.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (this[i] === arr[j] && !temparr.includes(this[i])) {
+                temparr[temparr.length] = this[i];
+            }
+        }
+    }
+    return temparr;
+};
 
 Array.prototype.union = function (arr) {
     const temparr = [];
@@ -206,5 +206,3 @@ function array_error(arr) {
         throw new Error("Value must be an array");
     }
 }
-
-// export default Constructor;
