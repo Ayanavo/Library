@@ -201,6 +201,47 @@ Array.prototype.zip = function (...arr) {
 // 	return tempobj;
 // };
 
+//orderby
+Array.prototype.orderBy = function (iteratees = [], orders = []) {
+    array_error(this);
+    const temparr = [...this];
+    
+    if (iteratees.length === 0) {
+        return temparr;
+    }
+    
+    const normalizedOrders = orders.map(order => order === 'desc' ? -1 : 1);
+    
+    temparr.sort((a, b) => {
+        for (let i = 0; i < iteratees.length; i++) {
+            const iteratee = iteratees[i];
+            const order = normalizedOrders[i] || 1;
+            
+            let aVal, bVal;
+            
+            if (typeof iteratee === 'function') {
+                aVal = iteratee(a);
+                bVal = iteratee(b);
+            } else if (typeof iteratee === 'string') {
+                aVal = a[iteratee];
+                bVal = b[iteratee];
+            } else {
+                continue;
+            }
+            
+            if (aVal < bVal) {
+                return -1 * order;
+            }
+            if (aVal > bVal) {
+                return 1 * order;
+            }
+        }
+        return 0;
+    });
+    
+    return temparr;
+}
+
 function array_error(arr) {
     if (Object.prototype.toString.call(arr) !== "[object Array]") {
         throw new Error("Value must be an array");

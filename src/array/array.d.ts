@@ -59,4 +59,13 @@ interface Array<T> {
      * @param predicate A function that accepts three arguments. Groups elements from the array under the same key that satisifes the function.
      */
     groupby(predicate: (value: T, index: number, array: T[]) => unknown): {[idx: string]: T[]};
+
+    /**
+     *  Returns a new array of elements sorted in the specified order by the results of running each element in a collection through each iteratee.
+     *  This method performs a stable sort, that is, it preserves the original sort order of equal elements. The order of grouped values is determined by the order they occur in the given array.
+     * @param iteratees A function that accepts three arguments. Sorts elements from the array in the order that satisifes the function.
+     * @param orders An array of strings indicating the sort order for each iteratee.
+     */
+     
+    orderBy(iteratees: (value: T, index: number, array: T[]) => unknown[], orders?: ('asc' | 'desc')[]): T[]; 
 }
